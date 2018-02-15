@@ -1,0 +1,14 @@
+{
+  "name": "home",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/awong05/home",
+    "type": "git"
+  },
+  "author": "Andy Wong",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.2.0"
+  }
+}
