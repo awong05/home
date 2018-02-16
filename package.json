@@ -9,6 +9,8 @@
   "author": "Andy Wong",
   "license": "MIT",
   "dependencies": {
-    "react": "^16.2.0"
+    "babel": "^6.23.0",
+    "react": "^16.2.0",
+    "webpack": "^3.11.0"
   }
 }
