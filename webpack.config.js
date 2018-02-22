@@ -8,18 +8,12 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'public', 'index.html')
-    }),
-    new ExtractTextPlugin('styles.css')
-  ],
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        loader: 'babel-loader'
       },
       {
         test: /\.css$/,
@@ -29,5 +23,12 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js']
-  }
+  },
+  devtool: 'source-map',
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'public', 'index.html')
+    }),
+    new ExtractTextPlugin('styles.css')
+  ]
 };
