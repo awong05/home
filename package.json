@@ -1,29 +1,26 @@
 {
   "name": "home",
-  "version": "0.0.0",
-  "private": true,
-  "engines": {
-    "node": ">=8.9.4",
-    "npm": ">=5.6.0"
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/awong05/home.git",
+  "author": "Andy Wong <Andy.Kee.Wong@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "start": "node ./dist/server"
   },
   "dependencies": {
-    "classnames": "^2.2.5",
     "express": "^4.16.2",
-    "graphql": "^0.13.1",
-    "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-redux": "^5.0.7",
-    "redux": "^3.7.2"
+    "react-dom": "^16.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.40",
-    "@babel/preset-env": "^7.0.0-beta.40",
-    "@babel/preset-flow": "^7.0.0-beta.40",
-    "@babel/preset-react": "^7.0.0-beta.40",
+    "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
-    "eslint": "^4.18.1",
-    "jest": "^22.4.2",
-    "webpack": "^3.11.0"
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^4.0.0",
+    "webpack-cli": "^2.0.8",
+    "webpack-node-externals": "^1.6.0"
   }
 }
