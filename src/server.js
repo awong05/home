@@ -1,3 +1,4 @@
+import path from 'path';
 import express from 'express';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
@@ -6,6 +7,8 @@ import Html from './client/Html';
 
 const port = 3000;
 const server = express();
+
+server.use(express.static(path.resolve(__dirname, '..', 'dist')));
 
 server.get('/', (req, res) => {
   const body = renderToString(<App />);
