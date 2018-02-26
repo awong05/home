@@ -11,7 +11,7 @@ const server = express();
 
 server.use(express.static(path.resolve(__dirname, '..', 'dist')));
 
-server.get('/', (req, res) => {
+server.get('*', (req, res) => {
   const context = {};
   const body = renderToString(<Router context={context} location={req.url}><App /></Router>);
   const title = 'Server side rendering with styled components';
