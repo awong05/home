@@ -1,5 +1,6 @@
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, 'src', 'server.js'),
@@ -10,6 +11,9 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/dist/'
   },
+  plugins: [
+    new UglifyJsPlugin()
+  ],
   module: {
     rules: [
       {
